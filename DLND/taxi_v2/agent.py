@@ -13,6 +13,7 @@ class Agent:
         """
         self.nA = nA
         self.Q = defaultdict(lambda: np.zeros(self.nA))
+        self.policy()
 
     def select_action(self, state):
         """ Given the state, select an action.
@@ -25,7 +26,12 @@ class Agent:
         =======
         - action: an integer, compatible with the task's action space
         """
-        return np.random.choice(self.nA)
+        # get epsilon-greedy action probabilities
+        policy_s = epsilon_greedy_probs(env, Q[state], i_episode)
+        # pick next action A
+        action = np.random.choice(np.arange(env.nA), p=policy_s)
+
+        return action
 
     def step(self, state, action, reward, next_state, done):
         """ Update the agent's knowledge, using the most recently sampled tuple.
@@ -38,4 +44,19 @@ class Agent:
         - next_state: the current state of the environment
         - done: whether the episode is complete (True or False)
         """
-        self.Q[state][action] += 1
+        self.Q[state][action] = self.update_Q(self.Q[state][action], np.max(self.Q[next_state]), reward)
+
+    def update_Q(Qsa, Qsa_next, reward, alpha=0.01, gamma=1.0):
+        """ updates the action-value function estimate using the most recent time step """
+        return Qsa + (alpha * (reward + (gamma * Qsa_next) - Qsa))
+
+    def epsilon_greedy_probs(env, Q_s, i_episode, eps=None):
+        """ obtains the action probabilities corresponding to epsilon-greedy policy """
+        epsilon = 1.0 / i_episode
+        if eps is not None:
+            epsilon = eps
+        policy_s = np.ones(env.nA) * epsilon / env.nA
+        # print("policy_s: ", policy_s)
+        policy_s[np.argmax(Q_s)] = 1 - epsilon + (epsilon / env.nA)
+        # print("policy_s: ", policy_s)  # policy_s.shape = 4, with prob for each action
+        return policy_s
