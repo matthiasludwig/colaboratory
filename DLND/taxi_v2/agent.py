@@ -1,6 +1,7 @@
 import numpy as np
 from collections import defaultdict
 
+
 class Agent:
 
     def __init__(self, nA=6):
