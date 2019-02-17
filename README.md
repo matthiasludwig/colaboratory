@@ -11,4 +11,7 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 - The Jupyter notebooks are split into two and include the indiviudal chapters of the class
 - images/ Subfolder includes references images for the Jupyter notebooks
 
+## CSbase
+- The Jupyter notebook includes all notes from the [University of Helsinki's Cybersecurity Base Course](https://cybersecuritybase.mooc.fi/)
+
 If you spot any inconsistencies feel free to open a PR!
