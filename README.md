@@ -14,4 +14,7 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 ## CSbase
 - The Jupyter notebook includes all notes from the [University of Helsinki's Cybersecurity Base Course](https://cybersecuritybase.mooc.fi/)
 
+## Codecademy
+- The markdown files include my notes to the different paths. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
+
 If you spot any inconsistencies feel free to open a PR!
