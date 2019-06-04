@@ -1,0 +1,19 @@
+body {
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+}
+
+
+
+/* Header */
+
+.header {
+    position: fixed;
+}
+
+.menu {
+    list-style-type: none;
+}
