@@ -44,7 +44,7 @@ This property is defined on the flex container.
 If a flex container has more rows, it is possible to define the spacing of elements from top to bottom.
 This property is defined on the flex container.
 
-**Exmaple:** `align-content: flex-start, flex-end, center, space-between, space around, stretch`
+**Example:** `align-content: flex-start, flex-end, center, space-between, space around, stretch`
 
 ### Summary up until now
 
