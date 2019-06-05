@@ -48,7 +48,7 @@ This property is defined on the flex container.
 
 ### Summary up until now
 
-flexbox has two axis: the horizontal (major axis by default) and vertical axis and different methods to position content on the page.
+Flexbox has two axis: the horizontal (major axis by default) and vertical axis and different methods to position content on the page.
 It is possible to change the major axis with `flex-direction: column, row, column-reverse, row-reverse;`
 
 #### Horizontal
