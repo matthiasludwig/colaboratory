@@ -17,4 +17,4 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 ## Codecademy
 - The markdown files include my notes to the different paths. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
 
-If you spot any inconsistencies feel free to open a PR!
+If you spot any inconsistencies or errors feel free to open a PR!
