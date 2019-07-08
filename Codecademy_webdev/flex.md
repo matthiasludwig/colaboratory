@@ -6,7 +6,7 @@
 ## Justify content
 Define how the individual items in a container should a aligned from left to right
 
-**Example**: `justify-content: flex-start, flex-end, center, space-around, space-between;`
+**Example**: `justify-content: flex, flex-start, flex-end, center, space-around, space-between;`
 
 ## Align items
 Define how the individual items should be aligned from top to bottom

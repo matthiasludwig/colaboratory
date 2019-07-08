@@ -20,12 +20,10 @@ li a {
     color: seashell;
 }
 
-.header {
+.flex-container{
     display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: black;
-    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 /* Header */
@@ -47,9 +45,8 @@ nav {
 #jumbotron {
     display: flex;
     height: 700px;
-    width: 100%; /* Deviate from design-spec here. Design spec wants 1200px hardcoded*/
     background-image: url("img/img-mission-background.jpg");
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     align-items: center;
     justify-content: center;
 }
