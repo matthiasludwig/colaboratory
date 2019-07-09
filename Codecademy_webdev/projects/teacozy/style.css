@@ -5,6 +5,7 @@ body {
     color: seashell;
     background-color: black;
     opacity: 0.9;
+    text-align: center;
 }
 
 header {
@@ -42,23 +43,30 @@ header img {
     flex-wrap: wrap;
 }
 
-/* Header */
+/* Main Section */
 
-#logo {
-    height: 50px;
-    padding: 10px;
+.main {
+    padding-top: 69px;
+    opacity: 0.9;
+    width: 1200px;
+    margin: auto; /* Makes everything in the main div centered. Example: Background image in #mission */
 }
 
-/* Jumbotron */
+/* Mission Section */
 
-#jumbotron {
-    display: flex;
+#mission {
     height: 700px;
     background-image: url("img/img-mission-background.jpg");
-    /*background-repeat: no-repeat;*/
-    align-items: center;
-    justify-content: center;
+    padding-top: 70px;
 }
+
+#mission .content {
+    margin: auto;
+    background-color: black;
+    width: 100%;
+}
+
+
 
 .headlines {
     background-color: black;
