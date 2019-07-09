@@ -7,17 +7,33 @@ body {
     opacity: 0.9;
 }
 
-ul {
-    list-style: none;
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 69px;
+    background-color: black;
+    border-bottom: 1px solid seashell;
+    align-items: center;
 }
 
-li {
-    display: inline-block;
-    padding: 0 1rem;
-}
-
-li a {
+a {
     color: seashell;
+}
+
+nav {
+    text-align: right;
+    flex-grow: 1;
+}
+
+nav span {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+header img {
+    height: 50px;
+    padding-left: 10px;
 }
 
 .flex-container{
@@ -27,13 +43,6 @@ li a {
 }
 
 /* Header */
-
-nav {
-    list-style-type: none;
-    align-items: flex-end;
-    display: inline;
-    padding-right: 10px;
-}
 
 #logo {
     height: 50px;

@@ -13,22 +13,22 @@ Define how the individual items should be aligned from top to bottom
 
 **Example:** `align-item: flex-start, flex-end, center, baseline, stretch;`
 
-## Flex grow
+## Flex grow - Flex Item
 Define how much an item should grow. Defined on item, not on container basis.
 
 **Example:** `flex-grow: 2;` *Default value is 1*
 
-## Flex shrink
+## Flex shrink - Flex Item
 Define how much an item should shrink.
 
 **Example:** `flex-shrink: 2;`
 
-## Flex basis
+## Flex basis - Flex Item
 Defines a basis for the flex item before it shrinks or grows.
 
 **Example:** `flex-basis: 150px;`
 
-## Flex property
+## Flex property - Flex Item
 It is possible to define grow, shrink and basis in one line with the flex property.
 This is not the same as the `display: flex;` declaration;
 
