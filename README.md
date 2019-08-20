@@ -11,10 +11,10 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 - The Jupyter notebooks are split into two and include the indiviudal chapters of the class
 - images/ Subfolder includes references images for the Jupyter notebooks
 
-## CSbase
+## cs_base
 - The Jupyter notebook includes all notes from the [University of Helsinki's Cybersecurity Base Course](https://cybersecuritybase.mooc.fi/)
 
-## Codecademy
-- The markdown files include my notes to the different paths. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
+## cc_webdev
+- The markdown files include my notes to the web development path. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
 
 If you spot any inconsistencies or errors feel free to open a PR!
