@@ -17,4 +17,7 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 ## cc_webdev
 - The markdown files include my notes to the web development path. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
 
+## RITx
+- This folder includes my notes from the [RITx MicroMaster on edx](https://www.edx.org/micromasters/ritx-cybersecurity).
+
 If you spot any inconsistencies or errors feel free to open a PR!
