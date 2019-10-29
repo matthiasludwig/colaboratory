@@ -20,4 +20,7 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 ## RITx
 - This folder includes my notes from the [RITx MicroMaster on edx](https://www.edx.org/micromasters/ritx-cybersecurity).
 
+## CS50x
+- This folder includes my notes and code snippets from [CS50](httsp://www.edx.org/cs50s-introduction-to-computer-science).
+
 If you spot any inconsistencies or errors feel free to open a PR!
