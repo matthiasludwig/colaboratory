@@ -14,6 +14,16 @@
 * Switch (with break; and default:)
 * ternary operator: int x = (expr) ? 5 : 6;
 
+#### Data types
+
+* (unsigned) int - 4 bytes
+* char - 1 byte
+* float - 4 bytes
+* double - 8 bytes
+
+void - is a type but not a **data** type.
+short/long/const or other qualifier.
+
 # Week 2
 
 **RAM** - Contigious Memory -\> Array
