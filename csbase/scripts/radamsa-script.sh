@@ -6,6 +6,7 @@
 #mkdir output-samples
 #mkdir imgmgck-output
 
+# radamsa -n # -o outputfolder inputfolders
 ~/Downloads/radamsa/bin/radamsa -n 100 -o output-samples/img-%n.jpg ~/Pictures/matthias.jpg
 
 for f in output-samples/*
