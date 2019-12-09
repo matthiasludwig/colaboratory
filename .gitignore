@@ -8,3 +8,5 @@ __MACOSX
 .ipynb_checkpoints/
 MNIST_data/
 colaboratory.code-workspace
+csbase/scripts/output-samples/*
+csbase/scripts/imgmgck-output/*
