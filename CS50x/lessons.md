@@ -1,20 +1,22 @@
-# Week 1
+# CS50 2020 Notes
 
-#### Command Line
+## Week 1
+
+### Command Line
 
 * ls - list contents of the current directory
 * cd - change directory
 * mkdir - create new folder
-* cp -r - copy file from <source> <destination> | -r copies directories recursively
+* cp -r - copy file from 'source destination' | -r copies directories recursively
 
-#### Conditional Statements
+### Conditional Statements
 
 * if
 * if-else
 * Switch (with break; and default:)
 * ternary operator: int x = (expr) ? 5 : 6;
 
-#### Data types
+### Data types
 
 * (unsigned) int - 4 bytes
 * char - 1 byte
@@ -24,11 +26,11 @@
 void - is a type but not a **data** type.
 short/long/const or other qualifier.
 
-# Week 2
+## Week 2
 
 **RAM** - Contigious Memory -\> Array
 
-## Sorting Algorithms
+### Sorting Algorithms
 
 O(n) - linear
 
@@ -72,15 +74,15 @@ Omega = n log n
 
 ---
 
-## Searching Algorithms
+### Searching Algorithms
 
-### Linear Search
+#### Linear Search
 
 O(n) = n
 
 Omega = 1
 
-### Binary Search
+#### Binary Search
 
 Array must be sorted! Divide and conquer.
 
