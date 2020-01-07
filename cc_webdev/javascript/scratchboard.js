@@ -12,3 +12,13 @@ const testFunc = function() {
 testFunc();
 
 console.log("Teststring is " + "TestString".length + " chars long")
+
+// String substitution
+
+const reportingForDuty = (rank, lastname) => `${rank} ${lastname} reporting for duty`;
+console.log(reportingForDuty("Private", "Fido"));
+
+// Test of JS Challenge code
+
+const canIVote = (age) => age >= 18 ? true : false;
+console.log(canIVote(19));
