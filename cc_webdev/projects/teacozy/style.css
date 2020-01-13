@@ -110,10 +110,16 @@ header img {
     flex-wrap: wrap;
 }
 
-.locations {
+.location {
+    margin-top: 15px;
+    background: black;
+    opacity: 1;
+}
+
+#locations {
     background: url("img/img-locations-background.jpg") no-repeat;
     height: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
 }
