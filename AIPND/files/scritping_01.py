@@ -1,6 +1,6 @@
-#names = [input() for i in range(3)]
-#assignments = [int(input()) for i in range(3)]
-#grades = [float(input()) for i in range(3)]
+names = [input() for i in range(3)]
+assignments = [int(input()) for i in range(3)]
+grades = [float(input()) for i in range(3)]
 
 # message string to be used for each student
 # HINT: use .format() with this string in your for loop
