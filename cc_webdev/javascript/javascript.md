@@ -56,3 +56,14 @@ console.log(onlyNumbers);
 * `reduce()` - with the callback function `(accumulator, currentValue) => {return accumulator + currentValue}` reduces an Array with the cb funciton
 
 [More Iterator function at MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Iteration_methods)
+
+## Objects
+
+### Object Literals
+
+When assigning a variable with `{}` we designate an object literal.
+Then it can be filled with unordered key-value pairs.
+
+We can access the properties of an object either with dot or bracket notation.
+
+`delete spaceship.mission` deletes a property from an object
