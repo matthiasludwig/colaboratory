@@ -69,3 +69,6 @@ We can access the properties of an object either with dot or bracket notation.
 `delete spaceship.mission` deletes a property from an object
 
 ### Advances Objects
+
+* The keyword `this` can not be used with arrow functions.
+* Privacy: Variables with a lead '_' like `_bankaccount` can not be altered directly, only reassigned. For this we need Setters and Getters
