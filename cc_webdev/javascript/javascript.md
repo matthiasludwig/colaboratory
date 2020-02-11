@@ -72,3 +72,8 @@ We can access the properties of an object either with dot or bracket notation.
 
 * The keyword `this` can not be used with arrow functions.
 * Privacy: Variables with a lead '_' like `_bankaccount` can not be altered directly, only reassigned. For this we need Setters and Getters
+
+#### Getters & Getters
+
+* Declare a function like `get fullName()` to define a getter.
+* Declare a function like `set fullName()` to set a variable.
