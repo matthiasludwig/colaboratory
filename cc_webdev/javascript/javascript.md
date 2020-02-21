@@ -122,3 +122,22 @@ const robotFactory = (model, mobile) => {
 const tinCan = robotFactory('P-500', true);
 tinCan.beep();
 ```
+
+#### Destructed Assignment
+
+Example for a shorthand destructred assignment
+
+```javascript
+// Object example
+const vampire = {
+  name: 'Dracula',
+  residence: 'Transylvania',
+  preferences: {
+    day: 'stay inside',
+    night: 'satisfy appetite'
+  }
+};
+// Example of a destructed assignment
+const { residence } = vampire;
+console.log(residence); // Prints 'Transylvania'
+```
