@@ -94,7 +94,7 @@ const robot = {
   },
   set numOfSensors(num) {
     if (typeof(num) == 'number' && num >= 0) {
-      this._numOfSensors = num;
+      this._numOfSensors = num; // When assigning take care of '_'
     }
     else {
       console.log("Pass in a number that is greater than or equal to 0");
