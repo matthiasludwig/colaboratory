@@ -27,6 +27,11 @@ let _ = {
     }
     
     return inRange;
+  },
+  words(string) {
+    const sentenceArray = string.split(' ');
+    
+    return sentenceArray;
   }
 };
 
