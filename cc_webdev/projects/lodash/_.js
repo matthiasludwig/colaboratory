@@ -32,6 +32,12 @@ let _ = {
     const sentenceArray = string.split(' ');
     
     return sentenceArray;
+  },
+  pad(string, length) {
+    if (string.length > length) {
+      return string;
+    }
+    
   }
 };
 
