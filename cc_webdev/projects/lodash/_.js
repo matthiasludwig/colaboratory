@@ -48,6 +48,16 @@ let _ = {
     let hasValue = object[key] != undefined ? true : false;
     
     return hasValue;
+  },
+  invert(object) {
+    let invertedObject = {}
+    
+    for (const item in object) {
+      let originalValue = object[item];
+      invertedObject[originalValue] = item;
+    }
+    
+    return invertedObject;
   }
 };
 
