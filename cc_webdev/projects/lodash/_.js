@@ -43,6 +43,11 @@ let _ = {
     const paddedString = ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength);
     
     return paddedString;
+  },
+  has(object, key) {
+    let hasValue = object[key] != undefined ? true : false;
+    
+    return hasValue;
   }
 };
 
