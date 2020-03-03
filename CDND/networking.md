@@ -20,4 +20,3 @@ CIDR - Classless InterDomain Routing (for example: 192.168.178.22/24; 255.255.25
 
 ## OSI Model
 
-
