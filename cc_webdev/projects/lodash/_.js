@@ -58,6 +58,18 @@ let _ = {
     }
     
     return invertedObject;
+  },
+  findKey(object, predicate) {
+    for (const item in object) {
+      let value = object[item];
+      let predicateReturnValue = predicate(value);
+      
+      if(predicateReturnValue) {
+        return item;
+      }
+    }
+    
+    return undefined;
   }
 };
 
