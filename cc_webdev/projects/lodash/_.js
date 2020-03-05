@@ -86,9 +86,27 @@ let _ = {
     let droppedArray = this.drop(array, dropNumber);
     
     return droppedArray;
+  },
+  chunk(array, size) {
+    if (size === undefined) {
+      size = 1;
+    }
+    
+    let arrayChunks = [];
+    
+    for (let i = 0; i < array.length; i = i + size) {
+      let arrayChunk = array.slice(i, i + size);
+      arrayChunks.push(arrayChunk);
+    }
+    
+    return arrayChunks;
   }
 };
 
+
+// Debugging
+//console.log(_.chunk([1, 2, 3, 4], 2));
+//console.log([1, 2, 3, 4].slice(0, 2));
 
 
 
