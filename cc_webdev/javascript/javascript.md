@@ -141,3 +141,14 @@ const vampire = {
 const { residence } = vampire;
 console.log(residence); // Prints 'Transylvania'
 ```
+
+## Javascript Interactive Websites
+
+### Basics
+
+```javascript
+<script src="./script.js" defer or async></script>
+```
+
+* `defer` attribute defers the loading of the JS after the HTML has been loaded
+* `async` downloads the script in the background while the HTML is parsed
