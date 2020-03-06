@@ -20,3 +20,14 @@ CIDR - Classless InterDomain Routing (for example: 192.168.178.22/24; 255.255.25
 
 ## OSI Model
 
+* OSI - Open System Interconnection
+
+Layers in the OSI Model:
+
+1. Physical (DSL, etc.)
+2. Data Link (Ethernet, 802.11, MAC/LLC, PPP, etc.)
+3. Network (IP, ARP, IPSEC, etc.)
+4. Transport (TCP, UDP, SCTP)
+5. Session (Session enablement in TCP, RTP, SIP, SSL, TLS, etc.)
+6. Presentation (HTML, DOC, Encryption, etc.)
+7. Application (DNS, HTTP, SMTP, etc.)
