@@ -152,3 +152,12 @@ console.log(residence); // Prints 'Transylvania'
 
 * `defer` attribute defers the loading of the JS after the HTML has been loaded
 * `async` downloads the script in the background while the HTML is parsed
+
+### Javascript and the DOM
+
+* `document` grants access to the root of the DOM
+* `querySelector` to select a specific element by CSS selectors
+* `getElementById` to select an element by CSS id
+* `.innerHTML` and `.style` can modify the content and the style
+* `createElement()`, `appendChild()` and `removeChild()` to create and add/remove elements
+* `.onclick` to introduce interactive behaviour to elements
