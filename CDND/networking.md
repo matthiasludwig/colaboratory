@@ -41,3 +41,23 @@ LAN - Local Area Network (Without a Router). The Switch is buffering, managing s
 Unicast - 1:1
 Multicast - 1:Many
 Broadcast - 1:All (for example IP/MAC address)
+
+## Frame Structure
+
+Ethernet Packet = Layer 1
+
+* Preamble - 7 bytes
+* Start of the frame delimiter - 1 byte
+* Destination MAC - 6 bytes
+* Source MAC - 6 bytes
+* Optional Header (802.1 Q) - 4 bytes
+* Frame Type - 2 bytes
+* Payload - 46 - 1500 bytes (Would then include IP, then TCP, etc.)
+* Frame Check Sequences (FCS) - 4 bytes
+* Interpacket Gap - 12 bytes
+
+## Virtual LANs
+
+* Logical segment a switch into different network areas
+* VLAN1 - 192.168.1.0/24 | VLAN2 - 192.168.2.0/24 | VLAN3 - 192.168.3.0/24
+* To handle inter-VLAN routing we need a Layer 3 Switch (to do the Routing)
