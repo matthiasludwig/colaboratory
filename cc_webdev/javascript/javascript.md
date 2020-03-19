@@ -161,3 +161,8 @@ console.log(residence); // Prints 'Transylvania'
 * `.innerHTML` and `.style` can modify the content and the style
 * `createElement()`, `appendChild()` and `removeChild()` to create and add/remove elements
 * `.onclick` to introduce interactive behaviour to elements
+* `.src` or `style` to modify the attributes src and style of an element
+
+### Project: Chore Bot
+
+* Follow the CSS specificity rule when defining id, class and src
