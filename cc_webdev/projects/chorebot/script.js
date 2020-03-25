@@ -37,14 +37,7 @@ const closedDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/cho
 let numClosedDoors = 3;
 let openDoor1, openDoor2, openDoor3;
 
-const isClicked = (door) => {
-  if (door.src == closedDoorPath) {
-    return false;
-  }
-  else {
-    return true;
-  }
-};
+const isClicked = (door) => { (door.src == closedDoorPath) ? false : true};
 
 const playDoor = () => {
   numClosedDoors--;
