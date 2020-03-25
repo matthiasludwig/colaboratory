@@ -4,21 +4,21 @@ const doorImage3 = document.getElementById('door3');
 const startButton = document.getElementById('start');
 
 doorImage1.onclick = () => {
-  if (!isClicked(doorImage1)) {
+  if (!isClicked(doorImage1) && currentlyPlaying) {
     doorImage1.src = openDoor1;
-    playDoor();
+    playDoor(doorImage1);
   }
 };
 doorImage2.onclick = () => {
-  if (!isClicked(doorImage2)) {
+  if (!isClicked(doorImage2) && currentlyPlaying) {
     doorImage2.src = openDoor2;
-    playDoor();
+    playDoor(doorImage2);
   }
 };
 doorImage3.onclick = () => {
-  if (!isClicked(doorImage3)) {
+  if (!isClicked(doorImage3) && currentlyPlaying) {
     doorImage3.src = openDoor3;
-    playDoor();
+    playDoor(doorImage3);
   }
 };
 
@@ -26,6 +26,10 @@ function gameOver(status) {
   if (status == 'win') {
     startButton.innerHTML = 'You win! Play again?';
   }
+  else {
+      startButton.innerHTML = 'Game Over! Play again?';
+  }
+  currentlyPlaying = false;
 }
 
 const botDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg';
@@ -36,13 +40,19 @@ const closedDoorPath = 'https://s3.amazonaws.com/codecademy-content/projects/cho
 
 let numClosedDoors = 3;
 let openDoor1, openDoor2, openDoor3;
+let currentlyPlaying = true;
 
-const isClicked = (door) => { (door.src == closedDoorPath) ? false : true};
+const isClicked = (door) => (door.src == closedDoorPath) ? false : true;
 
-const playDoor = () => {
+const isBot = (door) => (door.src == botDoorPath) ? true : false;
+
+const playDoor = (door) => {
   numClosedDoors--;
   if (numClosedDoors === 0) {
     gameOver('win');
+  }
+  else if (isBot(door)) {
+      gameOver();
   }
 }
 
