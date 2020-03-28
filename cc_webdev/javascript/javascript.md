@@ -166,3 +166,17 @@ console.log(residence); // Prints 'Transylvania'
 ### Project: Chore Bot
 
 * Follow the CSS specificity rule when defining id, class and src
+
+## DOM Events with Javascript
+
+* `.addEventListener('type', function);` is a universal method to add an Event Listener to a DOM Object
+* `.removeEventListener('type', function)` is to remove an Event Listener after it is not needed anymore
+* JavaScript stores events in Event Objects, which include properties and methods
+  * `.target` to access the object that triggered the event
+  * `.name` to access the name of the Event
+  * `.timeStamp` to get the milliseconds from when the document was loaded when the Event was triggered
+  * `.key` stores the key in the Keyboard Events
+
+### Additional Event Types
+
+There are additional Event types besides the `.onclick` Event. A documentation of other Events can be found in the [MDN Documentation.](https://developer.mozilla.org/en-US/docs/Web/Events)
