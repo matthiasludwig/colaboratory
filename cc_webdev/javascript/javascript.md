@@ -180,3 +180,43 @@ console.log(residence); // Prints 'Transylvania'
 ### Additional Event Types
 
 There are additional Event types besides the `.onclick` Event. A documentation of other Events can be found in the [MDN Documentation.](https://developer.mozilla.org/en-US/docs/Web/Events)
+
+## Handlebars.js
+
+1. Add Handlebars.js to your HTML (For example via a CDN)
+2. Create a Handlebars Script in your HTML
+3. In the JS crap the innerHTML of the Script
+4. Use `Handlebars.compile()` to return a templating function
+5. Pass in a context to the templating function to save the returned compiled template
+6. Render the compiled templated on the HTML page
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Languages</title>
+    <link href="public/style.css" type="text/css" rel="stylesheet">
+    <script src="handlebars.min.js"></script>
+    <script id="languagesTemp" type="text/x-handlebars-template">
+    {{#each languages}}
+      <div class="card">
+        {{#if this.modern}}
+          <p>I should learn {{this.name}}.</p>
+          {{else}}
+            <p>When I have time, I'll learn {{this.name}}</p>
+          {{/if}}
+        </div>
+      {{/each}}
+    </script>
+  </head>
+  <body>
+    <h1>
+      Thoughts on Languages:
+    </h1>
+    <div id="goals">
+    </div>
+  <script src="public/main.js" type="text/javascript"></script>  
+  </body>
+</html>
+```
