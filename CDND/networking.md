@@ -61,3 +61,26 @@ Ethernet Packet = Layer 1
 * Logical segment a switch into different network areas
 * VLAN1 - 192.168.1.0/24 | VLAN2 - 192.168.2.0/24 | VLAN3 - 192.168.3.0/24
 * To handle inter-VLAN routing we need a Layer 3 Switch (to do the Routing)
+
+## FQDN - Fully Qualified Domain Name
+
+A FQDN consists of the `hostname` + `domain` + `toplevel domain (TLD)`.
+
+For example: www.udacity.com
+
+* `www` = hostname
+* `udacity` = domain
+* `com` = TLD
+
+## DNS - Domain Name System
+
+![img/FQDN_resolution.png](Picture of the resolution of a new DNS request)
+
+## Load Balancer
+
+Most common approaches of Load Balancing:
+
+* Round Robin - Requests are distributed sequentially among the ressources
+* BGP Anycast - This allows multiple servers to advertise the same IP address
+* Policy-based DNS load balancing - Uses policies to load balance traffic requests
+* Dedicated Load Balancing - Enables you to deploy and configure one or more custom load-balancers within a VPC
