@@ -304,3 +304,39 @@ console.log(nurseOlynyk.remainingVacationDays);
 nurseOlynyk.addCertification('Genetics');
 console.log(nurseOlynyk.certifications);
 ```
+
+### Modules
+
+Modules are reusable pieces of code that can be exported and again imported.
+
+1. Create an object that represents the module
+2. Add proporties or methods to the object
+3. Export the module with `module.exports`
+
+```javascript
+let Airplane = {};
+
+Airplane.myAirplane = "StarJet";
+
+module.exports = Airplane;
+```
+
+Importing a module via `require('./filepath');`
+
+```javascript
+const Airplane = require('./1-airplane.js');
+
+function displayAirplane() {
+  console.log(Airplane.myAirplane);
+}
+
+displayAirplane();
+```
+
+With ES6 there are two built-in ways to export modules:
+
+* default export - `export default Object`
+* named export - `export {Object1, Object2};`
+
+* default import - `import Object from './filepath';`
+* named import - `import {Object1, Object2} from './filepath';`
