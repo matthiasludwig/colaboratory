@@ -396,4 +396,48 @@ let orderPromise = orderSunglasses();
 console.log(orderPromise);
 ```
 
-`setTimeout` - NodeJS function that takes a callback function and Milliseconds
+* `setTimeout` - NodeJS function that takes a callback function and Milliseconds
+* `.then` - Takes (onFullfilled, onRejected) callback functions. Always returns a promise.
+
+Full example:
+
+```javascript
+const {checkInventory} = require('./library.js');
+
+const order = [['sunglasses', 1], ['bags', 2]];
+
+// Write your code below:
+
+function handleSuccess(resolvedValue) {
+  console.log(resolvedValue);
+}
+
+function handleFailure(rejectingReason) {
+  console.log(rejectingReason);
+}
+
+checkInventory(order).then(handleSuccess, handleFailure);
+
+// library.js
+
+const inventory = {
+    sunglasses: 1900,
+    pants: 1088,
+    bags: 1344
+};
+
+const checkInventory = (order) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let inStock = order.every(item => inventory[item[0]] >= item[1]);
+            if (inStock) {
+                resolve(`Thank you. Your order was successful.`);
+            } else {
+                reject(`We're sorry. Your order could not be completed because some items are sold out.`);
+            }
+        }, 1000);
+    })
+};
+
+module.exports = { checkInventory };
+```
