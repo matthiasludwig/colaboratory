@@ -357,3 +357,43 @@ try {
   console.log(e);
 }
 ```
+
+### Promises
+
+Promises represent a the eventual outcome of an asynchronous operation.
+
+A Promise can be one of three states:
+
+* Pending
+* Fulfilled
+* Rejected
+
+#### Example to create a Promise
+
+```javascript
+const inventory = {
+  sunglasses: 0,
+  pants: 1088,
+  bags: 1344
+};
+
+// Write your code below:
+function myExecutor(resolve, reject) {
+  if (inventory.sunglasses > 0) {
+    resolve("Sunglasses order processed.");
+  }
+  else {
+    reject("That item is sold out.");
+  }
+};
+
+function orderSunglasses() {
+  return new Promise(myExecutor);
+}
+
+let orderPromise = orderSunglasses();
+
+console.log(orderPromise);
+```
+
+`setTimeout` - NodeJS function that takes a callback function and Milliseconds
