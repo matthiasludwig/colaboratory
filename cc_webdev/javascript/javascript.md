@@ -481,7 +481,7 @@ As an Overview here are all three approaches shown in code:
 ```javascript
 const fs = require('fs');
 const promisifiedReadfile = require('./promisifiedReadfile');
-      
+
 // Here we use fs.readfile() and callback functions:
 fs.readFile('./file.txt', 'utf-8', (err, data) => {
   if (err) throw err;
