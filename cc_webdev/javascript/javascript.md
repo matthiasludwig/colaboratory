@@ -441,3 +441,29 @@ const checkInventory = (order) => {
 
 module.exports = { checkInventory };
 ```
+
+`.catch()` can be used to define the "onFailure" function from `.then`:
+
+```javascript
+prom
+  .then((resolvedValue) => {
+    console.log(resolvedValue);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });
+```
+
+`.all()` combines all Promises that can run concurrently into one promise:
+
+```javascript
+let myPromises = Promise.all([returnsPromOne(), returnsPromTwo(), returnsPromThree()]);
+
+myPromises
+  .then((arrayOfValues) => {
+    console.log(arrayOfValues);
+  })
+  .catch((rejectionReason) => {
+    console.log(rejectionReason);
+  });
+```
