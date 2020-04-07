@@ -517,3 +517,30 @@ readFiles()
 
 * `async`-functions always return a Promise
 * `await` returns the result of a Promise
+
+## Requests
+
+* `XMLHttpRequest()` Object (xhr) makes asynchronous Requests
+* [More information about XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction)
+* [More information about the JS Event loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+
+![Overview of XHR Request](../img/xhr.png)
+
+Overview of a basic XHR 'GET' request:
+
+```javascript
+const xhr = new XMLHttpRequest();
+
+const url = "https://api-to-call.com/endpoint";
+
+xhr.responseType = 'json';
+
+xhr.onreadystatechange = () => {
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    return xhr.response;
+  }
+}
+
+xhr.open('GET', url);
+xhr.send();
+```
