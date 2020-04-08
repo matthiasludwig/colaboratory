@@ -544,3 +544,41 @@ xhr.onreadystatechange = () => {
 xhr.open('GET', url);
 xhr.send();
 ```
+
+## Requests with ES6
+
+* The `.fetch()` method contains a Request object that contains the necessary data an API needs.
+* And sends the the request object to the API endpoint provided.
+* Returns a promise which ultimately resolves to an response object which contains the status of the promise with information the API send back.
+
+**Boilercode `.fetch()` code for 'GET' requests:**
+
+```javascript
+fetch("https://api-to-call.com/endpoint").then(response => {
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Request failed!'); // will be executed if response.ok is falsy
+},
+// second funciton for .then() that handles errors
+ networkError => {
+  console.log(networkError.message);
+}).then(jsonResponse => { // second then() function
+  return jsonResponse;
+});
+```
+
+**Boilercode `.fetch()` code for 'POST' requests:**
+
+```javascript
+fetch("https://api-to-call.com/endpoint", {method: 'POST', body: JSON.stringify({id: '200'})}).then(response => {
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Request failed!');
+}, networkError => {
+  console.log(networkError.message);
+}).then(jsonResponse => {
+  return jsonResponse;
+});
+```
