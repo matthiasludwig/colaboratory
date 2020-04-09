@@ -582,3 +582,39 @@ fetch("https://api-to-call.com/endpoint", {method: 'POST', body: JSON.stringify(
   return jsonResponse;
 });
 ```
+
+**Boilercode `.fetch()` code with async/await functions for 'GET' requests:**
+
+```javascript
+const getData = async () => {
+  try {
+    const response = await fetch("https://api-to-call.com/endpoint");
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    }
+    throw new Error("Request failed!");
+  } catch(error) {
+    console.log(error);
+  }
+}
+```
+
+**Boilercode `.fetch()` code with async/await functions for 'POST' requests:**
+
+```javascript
+const getData = async () => {
+  try {
+    const response = await fetch("https://api-to-call.com/endpoint", {
+      method: 'POST',
+      body: JSON.stringify({id: 200})});
+    if (response.ok) {
+      const jsonResponse = await response.json();
+      return jsonResponse;
+    }
+    throw new Error("Request failed!");
+  } catch(error) {
+    console.log(error);
+  }
+};
+```
