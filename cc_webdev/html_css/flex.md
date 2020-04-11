@@ -12,7 +12,7 @@ Define how the individual items in a container should a aligned from left to rig
 
 ## Align items
 
-Define how the individual items should be aligned from tosp to bottom
+Define how the individual items should be aligned from top to bottom
 
 **Example:** `align-item: flex-start, flex-end, center, baseline, stretch;`
 
@@ -80,4 +80,4 @@ Defines the values for flex direction and flex-wrap in the same line.
 
 ### Summary of chapter
 
-![flex-summary](img/flex-summary.png)
+![flex-summary](../img/flex-summary.png)
