@@ -32,6 +32,44 @@ done
 
 * `for variable in $iterable`
 * `until` loop that is a negated while loop
-* `alias newcommand='./script "arg"'
+* `alias newcommand='./script "arg"'`
 * `$@` to accept infinite arguments
 * `files=/home/usr/*'` and `for file in $files`
+
+## Simple Build Script
+
+```bash
+#!/bin/bash
+
+echo "Welcome to the first build script!"
+firstline=$(head -n 1 source/changelog.md)
+#Comment split first line into an array
+read -a splitfirstline <<< $firstline
+version=${splitfirstline[1]}
+
+echo -e "Current Version is $version \nIs that correct? (0 for no, 1 for yes)"
+read versioncontinue
+
+if [ $versioncontinue -eq "1" ]
+then
+  echo "OK"
+  for file in source/*
+  do
+    if [ "$file" == "source/secretinfo.md" ]
+    then
+      touch build/secretinfo.md
+      sed 's/42/XX/' $file > build/secretinfo.md
+      echo "Redacted" $file
+    else
+      echo "Copying" $file
+      cp $file build/
+    fi
+  done
+  cd build/
+  echo "Files in build/ with version $version:"
+  ls
+  cd ..
+else
+  echo "Please come back when you are ready"
+fi
+```
