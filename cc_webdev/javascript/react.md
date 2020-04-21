@@ -199,3 +199,89 @@ class Toggle extends React.Component {
 
 ReactDOM.render(<Toggle />, document.getElementById('app'));
 ```
+
+## Programming Pattern
+
+### Stateless Components inherit from Stateful Components
+
+* `props` should never change its data. The only way to change a prop is when the Parent props state changes.
+* `setState()` changes the state of the stat object.
+* Stateless Components (Child.js) inherit from Stateful Components (Parent.js)
+
+### Child components update their parent's state
+
+`Parent.js`
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Child } from './Child';
+
+class Parent extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { name: 'Frarthur' };
+    this.changeName = this.changeName.bind(this);
+  }
+  
+  changeName(newName) {
+    this.setState( {name: newName});
+  }
+
+  render() {
+    return <Child name={this.state.name} onChange={this.changeName} />
+  }
+}
+
+ReactDOM.render(
+  <Parent />,
+  document.getElementById('app')
+);
+```
+
+`Child.js`
+
+```javascript
+import React from 'react';
+
+export class Child extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  handleChange(e) {
+    const name = e.target.value;
+    this.props.onChange(name);
+  }
+  
+  render() {
+    return (
+      <div>
+        <h1>
+          Hey my name is {this.props.name}!
+        </h1>
+        <select id="great-names" onChange={this.handleChange}>
+          <option value="Frarthur">
+            Frarthur
+          </option>
+
+          <option value="Gromulus">
+            Gromulus
+          </option>
+
+          <option value="Thinkpiece">
+            Thinkpiece
+          </option>
+        </select>
+      </div>
+    );
+  }
+}
+```
+
+### Child Components Update Siblings Components
+
+One child to display data and another one to change data.
