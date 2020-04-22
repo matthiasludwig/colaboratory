@@ -285,3 +285,29 @@ export class Child extends React.Component {
 ### Child Components Update Siblings Components
 
 One child to display data and another one to change data.
+
+### Authentification and OAuth
+
+1. Login with a service (e.g. facebook, twitter, google, ...)
+2. The service displays the level of permission the requesting App wants
+3. If the user agrees, he will be redirected to the app with an access token
+
+OAuth 2 and it's implementations:
+
+#### Client Credentials Grant
+
+Instead of an API Key, the service returns a *client_ID* and a *client_secret*
+
+#### Authorization Code Grant
+
+Most commonly used by popular services.
+
+*A user is redirected to the authenticating site, verifies the application requesting access and permissions, and is redirected back to the referring site with an authorization code.*
+
+Then:
+
+*The requesting application then takes this code and submits it to the authenticating API, along with the application’s client ID and client secret to receive an access token and a refresh token. This access token and refresh token are then used in the same manner as the previous flow.*
+
+#### Implicit Grant
+
+*The result of this interaction is an access token, and typically no refresh token. The access token is then used by application to make additional requests to the service, but is not sent to the server side of the requesting application.*
