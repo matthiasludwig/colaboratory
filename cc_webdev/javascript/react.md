@@ -205,7 +205,7 @@ ReactDOM.render(<Toggle />, document.getElementById('app'));
 ### Stateless Components inherit from Stateful Components
 
 * `props` should never change its data. The only way to change a prop is when the Parent props state changes.
-* `setState()` changes the state of the stat object.
+* `setState()` changes the state of the state object.
 * Stateless Components (Child.js) inherit from Stateful Components (Parent.js)
 
 ### Child components update their parent's state
@@ -284,7 +284,7 @@ export class Child extends React.Component {
 
 ### Child Components Update Siblings Components
 
-One child to display data and another one to change data.
+One child to display data and another one to change data. (for example: Video Player Project)
 
 ### Authentification and OAuth
 
@@ -311,3 +311,80 @@ Then:
 #### Implicit Grant
 
 *The result of this interaction is an access token, and typically no refresh token. The access token is then used by application to make additional requests to the service, but is not sent to the server side of the requesting application.*
+
+## Advanced React
+
+### Seperating Presentational Components from Container Components
+
+* The Presentational Component takes care of rendering the JSX/HTML.
+* The Container Component includes the logic and passes the result to the Presentational Component
+* The `render()` function of the container Component is just a return `<PresentationalComponent />`;
+
+### Stateless functional components
+
+```javascript
+// Normal way to display a prop:
+export class MyComponentClass extends React.Component {
+  render() {
+    return <h1>{this.props.title}</h1>;
+  }
+}
+
+// Stateless functional component way to display a prop:
+export const MyComponentClass = (props) => {
+  return <h1>{props.title}</h1>;
+}
+
+// Normal way to display a prop using a variable:
+export class MyComponentClass extends React.component {
+  render() {
+    let title = this.props.title;
+    return <h1>{title}</h1>;
+  }
+}
+
+// Stateless functional component way to display a prop using a variable:
+export const MyComponentClass = (props) => {
+  let title = props.title;
+  return <h1>{title}</h1>;
+}
+```
+
+### propTypes
+
+```javascript
+import React from 'react';
+
+export const GuineaPigs = (props) => {
+  let src = props.src;
+  return (
+    <div>
+      <h1>Cute Guinea Pigs</h1>
+      <img src={src} />
+    </div>
+  );
+}
+
+GuineaPigs.propTypes = {
+  src: React.PropTypes.string.isRequired
+}
+```
+
+## Lifecycle Methods
+
+Lifecycle methods are methods that get called at certain moments in a component’s life.
+
+### Mounting Lifecycle Methods
+
+* componentWillMount - before first render
+* render
+* componentDidMount - good place to connect the front-end to the back-end
+* componentWillUnmount
+
+### Updating Lifecycle Methods
+
+* componentWillReceiveProps
+* shouldComponentUpdate - return true or false
+* componentWillUpdate - can't use `this.setState({...})`
+* render
+* componentDidUpdate
