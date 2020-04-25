@@ -296,7 +296,7 @@ OAuth 2 and it's implementations:
 
 #### Client Credentials Grant
 
-Instead of an API Key, the service returns a *client_ID* and a *client_secret*
+Instead of an API Key, the service returns a *client_ID and a client_secret*.
 
 #### Authorization Code Grant
 
