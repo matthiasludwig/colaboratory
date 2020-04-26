@@ -185,7 +185,7 @@ There are additional Event types besides the `.onclick` Event. A documentation o
 
 1. Add Handlebars.js to your HTML (For example via a CDN)
 2. Create a Handlebars Script in your HTML
-3. In the JS crap the innerHTML of the Script
+3. In the JS grab the innerHTML of the Script
 4. Use `Handlebars.compile()` to return a templating function
 5. Pass in a context to the templating function to save the returned compiled template
 6. Render the compiled templated on the HTML page
@@ -560,7 +560,7 @@ fetch("https://api-to-call.com/endpoint").then(response => {
   }
   throw new Error('Request failed!'); // will be executed if response.ok is falsy
 },
-// second funciton for .then() that handles errors
+// second function for .then() that handles errors
  networkError => {
   console.log(networkError.message);
 }).then(jsonResponse => { // second then() function
@@ -593,7 +593,7 @@ const getData = async () => {
       const jsonResponse = await response.json();
       return jsonResponse;
     }
-    throw new Error("Request failed!");
+    throw new Error("Request failed!"); // Is only executed if first if() is not true
   } catch(error) {
     console.log(error);
   }
@@ -612,7 +612,7 @@ const getData = async () => {
       const jsonResponse = await response.json();
       return jsonResponse;
     }
-    throw new Error("Request failed!");
+    throw new Error("Request failed!"); // Is only executed if first if() is not true
   } catch(error) {
     console.log(error);
   }
