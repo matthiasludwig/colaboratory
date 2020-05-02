@@ -374,7 +374,7 @@ GuineaPigs.propTypes = {
 
 Lifecycle methods are methods that get called at certain moments in a componentâ€™s life.
 
-### Mounting Lifecycle Methods
+### Mounting Lifecycle Methods - DEPRECATED
 
 * componentWillMount - before first render
 * render
@@ -388,3 +388,26 @@ Lifecycle methods are methods that get called at certain moments in a componentâ
 * componentWillUpdate - can't use `this.setState({...})`
 * render
 * componentDidUpdate
+
+## React Hooks
+
+* Ability to use React functionality without using `class`
+* Function oriented vs. OOP
+
+Example:
+
+```javascript
+import React, { useState } from 'react';
+
+function Example() {
+  // Declare a new state variable, which we'll call "count"  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
