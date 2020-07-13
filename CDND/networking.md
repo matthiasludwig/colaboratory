@@ -35,7 +35,7 @@ Layers in the OSI Model:
 Encapsulation and Decapsulation:
 
 * _As the data is being packaged up on a sending device, the data moves down the OSI model; this process of the data moving down the OSI model is called encapsulation._
-* _When the data is being unpacked on a receiving device, the data moves _up_ OSI model; this process of the data moving up the OSI model is called decapsulation._
+* _When the data is being unpacked on a receiving device, the data moves up OSI model; this process of the data moving up the OSI model is called decapsulation._
 
 LAN - Local Area Network (Without a Router). The Switch is buffering, managing speeds and routing the packages.
 Unicast - 1:1
