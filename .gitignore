@@ -1,6 +1,6 @@
 AIPND/DL_PyTorch-master/F_MNIST_data/*
 AIPND/DL_PyTorch-master/MNIST_data/*
-.idea
+.idea/
 *.pth
 *.pyc
 AIPND/DL_PyTorch-master/Cat_Dog_data/*
