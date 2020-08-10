@@ -30,6 +30,43 @@ myEmitter.emit('celebration', 'Dogs!');
 
 ```
 
+* Creating a listenerCallback creates a function that is called on an Event emit.
+* With `myEmitter.on('firstArg', callback)` it is determined on which input (first arg) which callback is triggered.
+* With `myEmitter.emit('firstArg', data)` the callback function is called with the provided data.
+
+## Asynchronous JavaScript with NodeJS
+
+We have the:
+
+* Call Stack
+* Node APIs
+* CallbackQueue
+
+the following code will never work since the synchronous code always runs and the callback is added to the Callback Queue and never gets a chance to be executed
+
+```javascript
+let keepGoing = true;
+
+let callback = () => {
+  keepGoing = false;
+};
+
+setTimeout(callback, 1000); // Run callback after 1000ms
+
+while(keepGoing === true) {
+  console.log(`This is the song that never ends. Yes, it just goes on and on my friends. Some people started singing it, not knowing what it was, and they'll continue singing it forever just because...`)
+};
+```
+
+## User Input
+
+```javascript
+process.stdin.on('data', (userInput) => {
+  let input = userInput.toString();
+  console.log(input);
+})
+```
+
 ## Errors
 
 * Node has the same Error types as Javascript
