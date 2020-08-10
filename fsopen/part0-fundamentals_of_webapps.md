@@ -10,7 +10,7 @@
 
 In the sample web app there is a JS script that fetches the notes from a .json that is on the same domain.
 
-```
+```javascript
 var xhttp = new XMLHttpRequest()
   
 xhttp.onreadystatechange = function () {
@@ -23,7 +23,7 @@ xhttp.onreadystatechange = function () {
 
     data.forEach(function(note){
       var li = document.createElement('li')
-      
+
       ul.appendChild(li);
       li.appendChild(document.createTextNode(note.content))
     })
@@ -50,7 +50,7 @@ Also the data is redrawn dynamically by the javascript instead of realoding the 
 
 This is achieved by the following JS code:
 
-```
+```javasript
 var notes = []
 
 var redrawNotes = function() {
