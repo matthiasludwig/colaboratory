@@ -166,3 +166,22 @@ const server = http.createServer(requestListener);
 
 server.listen(3000);
 ```
+
+After defining that a web server can listen to request we need to define *Routes* to tell it what to do with the requests
+
+### Routes
+
+```javascript
+app.get('/path', (req, res. next) => {
+  res.send(objects);
+})
+```
+
+To use wildcards in requests we can use the following:
+
+```javascript
+app.get('/monsters/:name', (req, res, next) => {
+  console.log(req.params) // {name: 'hydra'}
+  res.send(monsters[req.params.name]);
+});
+```
