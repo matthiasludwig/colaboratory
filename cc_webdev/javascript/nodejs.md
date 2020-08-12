@@ -185,3 +185,7 @@ app.get('/monsters/:name', (req, res, next) => {
   res.send(monsters[req.params.name]);
 });
 ```
+
+### Routers
+
+Routers are mini-Express Applications.
