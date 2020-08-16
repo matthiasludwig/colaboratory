@@ -3,32 +3,29 @@ const app = express();
 
 const PORT = process.env.PORT || 4001;
 
-const battlefields = {
-  fortSumter: {
-    state: 'SC',
-  },
-  manassas: {
-    state: 'VA',
-  },
-  gettysburg: {
-    state: 'PA',
-  },
-  antietam: {
-    state: 'MD',
-  }
+const puddingFlavors = ['chocolate', 'banana', 'butterscotch', 'pistachio'];
+
+const findPuddingIndex = (name) => {
+  return puddingFlavors.indexOf(name);
 }
 
-app.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
-});
+const deletePuddingAtIndex = (index) => {
+  puddingFlavors.splice(index, 1);
+}
 
-app.get('/battlefields/:name', (req, res, next) => {
-  const battlefieldName = req.params.name;
-  console.log(battlefieldName)
-  if (battlefields[battlefieldName]) {
-    res.send(battlefields[battlefieldName])
+// Your code here!
+app.delete('/puddings/:flavor', (req, res, next) => {
+  const flavorName = req.params.flavor;
+  const flavorIndex = findPuddingIndex(flavorName);
+  if (flavorIndex !== -1) {
+    deletePuddingAtIndex(flavorIndex);
+    res.status(204).send();
   }
   else {
     res.status(404).send();
   }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
