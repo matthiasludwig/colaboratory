@@ -12,3 +12,4 @@ csbase/scripts/output-samples/*
 csbase/scripts/imgmgck-output/*
 .scannerwork/
 cc_webdev/projects/wanderlust/credentials.js
+node_modules/

@@ -189,3 +189,18 @@ app.get('/monsters/:name', (req, res, next) => {
 ### Routers
 
 Routers are mini-Express Applications.
+
+```javascript
+const express = require('express');
+const app = express();
+
+const expressionsRouter = express.Router();
+
+app.use('/expressions', expressionsRouter);
+
+expressionsRouter.get('', (req, res, next) => {
+  res.send(expressions);
+});
+
+module.exports = expressionsRouter; // To make it available outside the expressions.js (for exmaple: app.js)
+```
