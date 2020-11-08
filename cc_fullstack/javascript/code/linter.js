@@ -31,7 +31,7 @@ for (let i = 0; i < story.length; i++) {
 
 console.log(sentences);
 
-const formattedOutput = (story, sentences, counter) => `${story.length} is the length of the story, ${sentences} is the number of sentences and ${counter} is the number of overused words!`;
+const formattedOutput = (storyLength, sentencesNumber, overusedNumber) => `${storyLength} is the length of the story, ${sentencesNumber} is the number of sentences and ${overusedNumber} is the number of overused words!`;
 
 console.log(formattedOutput(story, sentences, counter));
 console.log(betterWords.join(' '));
