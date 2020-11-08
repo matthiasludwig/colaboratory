@@ -11,6 +11,6 @@ colaboratory.code-workspace
 csbase/scripts/output-samples/*
 csbase/scripts/imgmgck-output/*
 .scannerwork/
-*/credentials.js
+**/credentials.js
 node_modules/
 package-lock.json
