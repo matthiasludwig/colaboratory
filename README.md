@@ -18,13 +18,9 @@ Originally these files were hosted on Google's [colab](https://colab.research.go
 
 * The Markdown files include the notes from class
 
-## cs_base 2019/2020
+## cc_fullstack
 
-* The Jupyter notebook includes all notes from the [University of Helsinki's Cybersecurity Base Course](https://cybersecuritybase.mooc.fi/)
-
-## cc_webdev
-
-* The markdown files include my notes to the web development path. Currently I am completing the [Web Development path](https://www.codecademy.com/learn/paths/web-development)
+* The markdown files include my notes to the web development path. Currently I am completing the [Full Stack Path](https://www.codecademy.com/learn/paths/full-stack-engineer-career-path)
 
 ## CS50x 2020
 
