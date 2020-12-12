@@ -1,0 +1,100 @@
+body {
+    margin: 0 10%;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 26px;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 10px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    border: 1px solid black;
+    margin-bottom: 5%;
+    padding: 10px;
+}
+
+.color {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    margin: 20px auto;
+    min-height: 100px;
+}
+
+.font {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+    min-height: 100px;
+}
+
+.text-style {
+    display: inline-block;
+    text-align: left;
+    min-height: 100px;
+    width: 100%;
+}
+
+.font-heading {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.source-code-pro {
+    font-family: "Source Code Pro", sans-serif;
+}
+
+.nunito-pro {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+.poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+.regular {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* Color divs */
+
+#silver {
+    background-color: silver;
+}
+
+#red {
+    background-color: red;
+}
+
+#turquois {
+    background-color: turquoise;
+}
+
+#black {
+    background-color: black;
+    color: white;
+}
+
+/* Font divs */
