@@ -1,18 +1,21 @@
 # Flexbox Introduction
 
+We need to distinguish between flex-containers and flex-items (children of flex-containers).
+Additionally flex should be used for parts of the website, not necessarily the entire website.
+
 ## How to declare a container as flex
 
-**Example:** `display: inline-flex;`
+**Example:** `display: inline-flex;` or `display: flex`
 
 ## Justify content
 
-Define how the individual items in a container should a aligned from left to right
+Define how the individual items in a container should a aligned from left to right. (horizontal axis)
 
 **Example**: `justify-content: flex, flex-start, flex-end, center, space-around, space-between;`
 
 ## Align items
 
-Define how the individual items should be aligned from top to bottom
+Define how the individual items should be aligned from top to bottom. (vertical axis)
 
 **Example:** `align-item: flex-start, flex-end, center, baseline, stretch;`
 
@@ -74,7 +77,7 @@ It is possible to change the major axis with `flex-direction: column, row, colum
 
 ## Flex flow
 
-Defines the values for flex direction and flex-wrap in the same line.
+Defines the values for flex direction and flex-wrap in the same line. Defined on container level.
 
 **Example:** `flex-flow: column wrap;` *Defines flex-direction as column and flex-wrap as wrap*
 
