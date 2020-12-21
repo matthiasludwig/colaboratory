@@ -59,9 +59,9 @@ header {
 
 * Additionally we can let areas overlap and define the overlap via the `z-index: val;` property.
 * `justify-items: start | end | center | stretch`: positions items along the rows
-* `justify-content: start | end | center | stretch | space-around | space-between | ace-evenly`: how to position an element within it's parent element
+* `justify-content: start | end | center | stretch | space-around | space-between | space-evenly`: how to position an element within it's parent element
 * `align-items: start | end | center | stretch`: positions items along the columns
-* `align-content: start | end | center | stretch | space-around | space-between | ace-evenly`: positions the rows along the column axis, from top to bottom
+* `align-content: start | end | center | stretch | space-around | space-between | space-evenly`: positions the rows along the column axis, from top to bottom
 * `justify-self: start | end | center | stretch`: How should **the element** position itself with respect to the row
 * `align-self: start | end | center | stretch`: How should **the element** position itself with respect to the column
 
