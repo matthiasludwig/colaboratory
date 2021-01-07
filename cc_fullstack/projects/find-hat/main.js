@@ -26,7 +26,7 @@ class Field {
 
     for (const i in this.field) {
       const index = this.field[i].findIndex((char) => char === '*');
-      if (index != -1) {
+      if (index !== -1) {
         result = [Number(i), index];
         break;
       }
@@ -70,9 +70,9 @@ class Field {
   // Generate Field
   static generateField(row, col, prob) {
     const map = [];
-    for (let r = row; r > 0; r--) {
+    for (let r = row; r > 0; r -= 1) {
       const rowArr = [];
-      for (let c = col; c > 0; c--) {
+      for (let c = col; c > 0; c -= 1) {
         rowArr.push(((Math.random() > prob) ? '░' : '0'));
       }
       map.push(rowArr);
