@@ -8,10 +8,18 @@
 * `process.memoryUsage()` returns information about the CPU demands of the current process
 * `process.argv` returns the arguments that were used to start the program
 
-## Core Moduls and Local Modules
+## Core Modules and Local Modules
 
-* `require=('events');` imports a module to the program
-* `module.exports` exports a (local) module
+* `let events = require('events');` imports a module to the program (node)
+* `module.exports.[name] = [name]` exports a (local) module
+
+* `import { exportedRessourceA as newlyNamedRessource, exportedRessourceB, ... } from '/path/to/module.js'` imports a module in ES6 Syntaxå
+* `export { ressourceToExportA, ressourceToExportB, ... }` exports a module in ES6
+
+### ES6 Defaults
+
+* `import resources from 'module.js'` imports the resource as default next step would be `const {valueA, valueB} = resources`
+* `export default resources` exports resources as default
 
 ## Event-driven Architecture
 
