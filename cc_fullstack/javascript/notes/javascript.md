@@ -333,16 +333,6 @@ function displayAirplane() {
 displayAirplane();
 ```
 
-With ES6 there are two built-in ways to export modules:
-
-* default export - `export default Object;`
-* named export - `export {Object1, Object2};`
-* export as - `export {Object1 as object, ...};`
-
-* default import - `import Object from './filepath';`
-* named import - `import {Object1, Object2} from './filepath';`
-* import as - `import {Object1 as object,..} from './filepath';` or `import * as Object from './filepath';`
-
 ### Errors and Error Handling
 
 Possible Errors: SyntaxError, ReferenceError, TypeError. A comprehensive list can be found on [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)

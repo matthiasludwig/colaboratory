@@ -21,7 +21,17 @@
 * `import resources from 'module.js'` imports the resource as default next step would be `const {valueA, valueB} = resources`
 * `export default resources` exports resources as default
 
-## Event-driven Architecture
+#### With ES6 there are two built-in ways to export modules
+
+**When using this the `<script>` needs to have a `type="module"` attribute**
+
+* default export - `export default Object;`
+* named export - `export {Object1, Object2};`
+* export as - `export {Object1 as object, ...};`
+
+* default import - `import Object from './filepath';`
+* named import - `import {Object1, Object2} from './filepath';`
+* import as - `import {Object1 as object,..} from './filepath';` or `import * as Object from './filepath';`
 
 ```javascript
 // Here we require in the 'events' module and save a reference to it in an events variable
